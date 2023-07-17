@@ -1,0 +1,46 @@
+
+<header class="header">
+  <nav class="nav-items">
+    <div class="logo-container">
+      <a href="#" class="logo">
+        <img src="../../assets/Images/logo.PNG" alt="Login" class="logo-icon">
+      </a>
+    </div>
+    <!-- <div class="head"> Admin Dashboard</div> -->
+    <div class="add-nav">
+      <button class="add-button" (click)="navigateToAddCourses()">
+        <i class="bi bi-file-earmark-plus"></i>Add courses
+      </button>
+    </div>
+    <div class="login-container">
+      <button routerLink="/" title="Home" class="login-button">
+        <img src="../../assets/Images/home.png" alt="Login" class="login-icon">
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div class="admin-page">
+  <div class="container">
+    <div class="row">
+      <div class="column" *ngFor="let course of courses; let i = index">
+        <div class="course-card">
+          <div class="edit">
+            <img [src]="course.courseImageUrl" alt="Course Image">
+            <div class="card-header">
+              {{ course.courseName }}
+              <button class="edit-button"><i class="bi bi-pencil-fill"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<footer class="footer" >
+    <h6 style="align-content: center;" >Code Craft </h6>
+</footer>
+
+
